@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot DeakinSocial password</title>
+    <!-- tab icon -->
+    <!-- We can change it later to have DeakinSocial's icon -->
+    <link rel="icon" href="images/forgotPasswordIcon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="deakin-social display-6 text-decoration-none text-danger">DeakinSocial</a>
+            <form class="d-flex" action="#">
+                <input class="form-control me-2" type="search" placeholder="Search Users" aria-label="Search">
+                <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="layout">
+        <div class="layout-left">
+        </div>
+        <div class="layout-main">
+
+            <div class="all-posts">
+                <div class="search-result">
+                    <div class="post">
+                        <div class="post-main">
+
+                            <div class="post-header">
+                                <div class="post-username">Username here</div>
+                                <div class="post-fullname">Full name here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-result">
+                    <div class="post">
+                        <div class="post-main">
+
+                            <div class="post-header">
+                                <div class="post-username">Username here</div>
+                                <div class="post-fullname">Full name here</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="layout-right-container">
+            <div class="layout-right">
+            </div>
+        </div> -->
+    <!-- </div>
+    </div>
+    </div> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search User</title>
+        <!-- tab icon -->
+        <!-- We can change it later to have DeakinSocial's icon -->
+        <link rel="icon" href="images/forgotPasswordIcon.png">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+            rel="stylesheet">
+
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- container is a bootstrap class -->
+        <div class="container-fluid" id="searchUserPage">
+            <!-- Row is again a bootstrap class inside which we can define coloumns of different sizes(1 to 12) -->
+            <!-- justify content is a flexbox property that will center all the items along the main axis -->
+            <!-- textcenter will center all text, shadow-lg will give the container a large shadow -->
+            <div class="row d-flex justify-content-center text-center shadow-lg">
+                <!-- a div in html has 12 parts so we create two coloumns of 6 units each -->
+                <!-- pt is padding top -->
+                <div class="col-8 pt-5 pb-5">
+                    <!-- display-4 is used to control font size of the heading and mb is margin bottom -->
+                    <h1 class="signupHeading display-4">Search User</h1>
+                    <!-- Guys set the submit link here!! -->
+                    <form action="/search" method="post">
+                        <!-- text-start is another bootstarp class that aligns the text to the start of the container -->
+                        <div class="text-start mt-1">
+                            <label for="username" class="form-label ms-3" aria-label="username search"></label>
+                            <input type="text" placeholder="Enter username/email here" name="username" id="username"
+                                class="form-control">
+                        </div>
+
+                        <!-- btn is bootstrap class that makes the button shape better and py is padding on top and bottom -->
+                        <button type="submit" class="signUpButton btn mb-4 py-2 mt-3">Search User</button>
+                    </form>
+                    <div class="container shadow-sm usersResult">
+                        <!-- keep it blank till you dind one -->
+                        <a id="userProfileLink" class="text-decoration-none text-danger" href="#"></a><br>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bootstrap JavaScript -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+                crossorigin="anonymous"></script>
+    </body>
+
+    </html>
+
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

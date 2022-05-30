@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for DeakinSocial</title>
+    <!-- tab icon -->
+    <!-- We can change it later to have DeakinSocial's icon -->
+    <link rel="icon" href="images/registerIcon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- container is a bootstrap class -->
+    <div class="container-fluid ">
+        <!-- Row is again a bootstrap class inside which we can define coloumns of different sizes(1 to 12) -->
+        <!-- justify content is a flexbox property that will center all the items along the main axis -->
+        <!-- textcenter will center all text, shadow-lg will give the container a large shadow -->
+        <div class="row d-flex justify-content-center text-center shadow-lg">
+            <!-- a div in html has 12 parts so we create two coloumns of 6 units each -->
+            <!-- pt is padding top -->
+            <div class="col-6 signupBox pt-5">
+                <!-- display-4 is used to control font size of the heading and mb is margin bottom -->
+                <h1 class="signupHeading display-4 mb-4">Sign Up</h1>
+                <!-- Guys set the submit link here!! -->
+                <form action="/signUp" method="post">
+
+                    <div class="row">
+                        <!-- col-md-6 and col-12 means if the size of the screen is medium or above split first name and last name otherwise give them their own line -->
+                        <!-- aria-label is used by screen-readers -->
+                        <div class="col-md-6 col-12 mb-2">
+                            <label for="fnameInput" class="form-label" aria-label="first name input">First Name</label>
+                            <input type="text" name="firstName" id="fnameInput" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 col-12 mb-2">
+                            <label for="lnameInput" class="form-label" aria-label="last name input">Last Name</label>
+                            <input type="text" name="lastName" id="lnameInput" class="form-control">
+                        </div>
+                    </div>
+                    <!-- text-start is another bootstarp class that aligns the text to the start of the container -->
+                    <div class="text-start">
+                        <label for="userName" class="form-label ms-3" aria-label="password input">Username</label>
+                        <input type="text" name="username" id="userName" class="form-control mb-4">
+
+                        <label for="userPassword" class="form-label ms-3" aria-label="password input">Password</label>
+                        <input type="password" name="password" id="userPassword" class="form-control mb-4">
+
+                        <label for="userEmail" class="form-label ms-3" aria-label="email input">Email</label>
+                        <input type="email" name="email" id="userEmail" class="form-control">
+                        <div class="form-text mb-3 text-center">We will not share your email with anyone</div>
+                    </div>
+
+                    <!-- Last min addition that I thought was important adding campus location -->
+                    <select class="form-select mb-4">
+                        <option selected>Please select your Deakin Campus</option>
+                        <option value="melbourneBurwoord">Melbourne Burwood</option>
+                        <option value="geelongWaurnPonds">Geelong Waurn Ponds</option>
+                        <option value="geelongWaterfront">Geelong Waterfront</option>
+                        <option value="warrnambool">Warrnambool</option>
+                        <option value="cloud">Cloud Campus</option>
+                    </select>
+
+                    <!-- btn is bootstrap class that makes the button shape better and py is padding on top and bottom -->
+                    <button type="submit" class="signUpButton btn mb-4 py-2">Sign Up</button>
+                </form>
+            </div>
+
+            <!-- d-none and d-md-block will make it so that on small screens this part will not appear -->
+            <div class="col-6 signupBox d-none d-md-block">
+                <h1 class="signupHeading display-4 welcome">Welcome to</h1>
+                <h1 class="signupHeading display-4">DeakinSocial!</h1>
+                <br>
+                <p class="lead">Enter your personal details and start using DeakinSocial!</p>
+                <a href="http://localhost:3000/signIn">Already a member? Sign In</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

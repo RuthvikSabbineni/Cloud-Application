@@ -1,0 +1,157 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.layout{
+    display: grid;
+    /* left middle and right coloumn */
+    grid-template-columns: 275px auto 300px;
+    margin: 0 auto;
+}
+
+.layout-right{
+   position: fixed; 
+}
+
+.sidebar-menu{
+    position: fixed;
+}
+.sidebar-menu-item{
+    font-size: 19px;
+    color: #0F141A;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.sidebar-menu-item:hover{
+    background:rgba(255, 75, 43, 0.111);
+    color: #FF4B2B;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sidebar-menu-item-active{
+    color: #FF4B2B;
+}
+
+.sidebar-menu-item-icon{
+    height: 26px;
+    margin-right: 20px;
+}
+
+.sidebar-menu-item-icon-active{
+    filter: invert(46%) sepia(60%) saturate(5246%) hue-rotate(344deg) brightness(102%) contrast(101%);
+}
+
+.all-posts{
+    margin-top: 80px;
+}
+
+.post{
+    display: flex;
+    border-bottom:1px solid white;
+    margin-bottom: 2px;
+    padding: 10px 15px;
+}
+
+.post:hover{
+    background: rgba(0,0,0,0.03);
+    cursor: pointer;
+}
+
+.post-header{
+    display: flex;  
+}
+.post-username{
+font-size: 15px;
+font-weight: 700;
+color: #14171a;
+margin-right: 5px;
+}
+
+.post-fullname{
+    margin-left: 10px;
+    color: #5b7083;
+    font-size: 15px;
+}
+
+.post-time{
+margin-left: 10px;
+color: #657786;
+}
+
+.post-username-comments{
+    margin-top: 20px;
+
+    border-top:1px solid #e6ecf0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #14171a;
+    margin-right: 5px;
+}
+
+
+
+.search-result{
+    border-bottom:1px solid #e6ecf0;
+    margin-bottom: 2px;
+    padding: 10px 15px;
+}
+
+
+.comments{
+margin-top: 9px;
+padding:0 5px;
+}
+
+.comments-box{
+margin-top: 100px;
+}
+
+
+.comments-box input{
+    width: 70%;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #86b0b6;
+}
+
+.comments-box input:focus{
+    border: 1px solid #000;
+    outline: 0;
+}
+
+.comments-box textarea{
+    width: 80%;
+    height: 150px; 
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #86b0b6; 
+    padding: 15px 20px; 
+}
+
+.comments-box textarea:focus{
+    border: 1px solid #000;
+    outline: 0;  
+}
+
+.comments-box button{
+   border: 0;
+   padding: 10px 30px;
+   background: #FF4B2B; 
+   font-size: 18px;
+   border-radius: 5px;
+   color: #e6ecf0;
+} 
+
+.sidebar-menu{
+    margin-top: 30px;
+}
+
+.all-posts-header{
+    margin-top: 30px;
+}

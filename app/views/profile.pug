@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Homepage
+  // Google Fonts
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap' rel='stylesheet')
+  // My CSS
+  style
+    include ../public/css/app.css
+.layout
+  .layout-left
+    h1.brand #{user.username}&apos;s Profile
+    .sidebar-menu
+      .sidebar-menu-item
+        a(href='http://localhost:3000/timeline') Homepage
+      .sidebar-menu-item
+        a(href='http://localhost:3000/') My Friends
+        
+      .sidebar-menu-item.sidebar-menu-item-active
+        a(href='http://localhost:3000/profile/dnargund') My Profile
+      .sidebar-menu-item
+        a(href='http://localhost:3000/search') Search
+  .layout-main
+    .all-posts
+      h2.all-posts-header All my posts
+      each post in posts
+        .post
+          .post-main
+            .post-header
+              .post-username 
+              a(href=`http://localhost:3000/profile/${post.username}`) #{post.username}
+              .post-time #{post.time}
+            .post-content #{post.content}
+            each comment in post.comments 
+              .post-username-comments
+              a(href=`http://localhost:3000/profile/${comment.username}`) #{comment.username}
+              .comments #{comment.comment}
+  .layout-right-container
+    .layout-right
+      .comments-box
+        form.layout-right-post-comment(method='post' action='')
+          textarea#comment(name='comment' placeholder='Share your thoughts here...')
+          button(type='submit') Submit Post

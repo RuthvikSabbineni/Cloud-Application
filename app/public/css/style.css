@@ -1,0 +1,74 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid{
+    margin-top: 100px;
+    max-width: 1000px;
+}
+
+.signupBox{
+    /* border: 2px solid black; */
+    height: 600px;
+}
+
+.signupBox:nth-last-of-type(1){
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);    color: white;
+}
+
+h1{
+font-weight: 700;
+}
+
+.signUpButton{
+    background-color: #FF4B2B;
+    border: none;
+    color: white;
+}
+
+.welcome{
+    padding-top: 150px;
+}
+
+.signupBox a{
+    text-decoration: underline;
+    color: white;
+    font-weight: 500;
+}
+
+#forgotPasswordLink{
+    color: #FF4B2B;
+    font-size: small;
+    font-weight: 300;
+}
+
+#forgotPasswordPage{
+    max-width: 700px;
+}
+
+#mainNavbar{
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#mainNavbar .navbar-brand{
+    color:#ea1c2c;
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+#mainNavbar .nav-link{
+    color: white;
+}
+
+#mainNavbar .nav-link:hover{
+    color: #ea1c2c;
+}
+
+.usersResult{
+height: 50px;
+display: flex;
+align-items: center;
+}
